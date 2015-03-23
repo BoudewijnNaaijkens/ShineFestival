@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('fonts/Roboto-Light.eot');
+    src: url('fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Light.woff') format('woff'),
+         url('fonts/Roboto-Light.ttf') format('truetype'),
+         url('fonts/Roboto-Light.svg#Roboto-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('fonts/Roboto-Thin.eot');
+    src: url('fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Thin.woff') format('woff'),
+         url('fonts/Roboto-Thin.ttf') format('truetype'),
+         url('fonts/Roboto-Thin.svg#Roboto-Thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	border-bottom-style: none;
+	border-bottom-width: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-attachment: fixed;
+	top: 0px;
+	background-image: url('img/achtergrond.jpg');
+	background-size: auto;
+}
+	
+section {
+	top: 0;
+	left: 0;
+	height: 100vh;
+	height: 100vw;
+}
+
+.column {
+	background-color: white;
+	margin-top: 35vh;
+	width: 90vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-top: 5vh;
+	padding-bottom: 20vh;
+	text-align: left;
+	font-size: medium;
+}
+
+p {
+	font-family: 'Roboto-Light';
+}
+
+h1 {
+	font-family: 'Roboto-Light';
+	text-align: center;
+	color: white;
+	font-weight: 300;
+	font-size: 2em;
+	position: fixed;
+	z-index: -1;
+}
+
+h2 {
+	font-family: 'Roboto-Light';
+	font-size: larger;
+}
+
+#welkom {
+	margin-left: 33vw;
+	margin-top: -20vh;
+}
+
+#record {
+	margin-left: 35vw;
+	margin-top: -20vh;
+}
+
+#compas {
+	margin-left: 34.5vw;
+	margin-top: -20vh;
+}
+
+nav {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	height: 10vh;
+}
+
+button {
+	display: block;
+	border-width: 0px;
+	height: 10vh;
+	width: 33.333vw;
+	float: left;
+	color: white;
+}
+
+#btn1 {
+	background-image: url('img/verhaal.svg');
+	background-repeat: no-repeat;
+	background-size: 33.333%;
+	background-position-x: 10vw;
+	background-position-y: 1.5vh;
+}
+
+#btn2 {
+	background-image: url('img/microfoon.svg');
+	background-repeat: no-repeat;
+	background-size: 33.333%;
+	background-position-x: 10vw;
+	background-position-y: 1.5vh;
+}
+
+#btn3 {
+	background-image: url('img/compas.svg');
+	background-repeat: no-repeat;
+	background-size: 33.333%;
+	background-position-x: 10vw;
+	background-position-y: 1.5vh; 
+}
+
+#instructies, #instructies-vervolg {
+	color: black;
+	margin-left: 3vw;
+}
+
+#instructies-vervolg {
+	margin-top: 15vh;
+}
+
+#btnAudio {
+	width: 30vw;
+	height: 10vh;
+	font-size: 1em;
+	margin-left: 30vw;
+	margin-top: 5vh;
+}
+
+#wijzer {
+	margin-top: 3vh;
+	margin-left: 31.5%;
+	width: 35%;
+}
+
+.show { display: block; }
+.hide { display: none; }
+button.down { background-color: rgba(72,151,137,1); }
+button.up {	background-color: rgba(120,206,206,1); }
