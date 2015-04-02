@@ -1,72 +1,52 @@
 function loadScript() {
-	//document.addEventListener('deviceready', onDeviceReady, false);
 	onDeviceReady();
 };
 
 function onDeviceReady(){
-	document.getElementById('btn1').addEventListener('mouseup', page1Show, false);
-	document.getElementById('btn2').addEventListener('mouseup', page2Show, false);
-	document.getElementById('btn3').addEventListener('mouseup', page3Show, false);
-	document.getElementById('btnAudio').addEventListener('mouseup', recordAudio, false);
-	startWatch();
+	document.getElementById('knop1').addEventListener('mouseup', pagina1Show, false);
+	document.getElementById('knop2').addEventListener('mouseup', pagina2Show, false);
+	document.getElementById('knop3').addEventListener('mouseup', pagina3Show, false);
+	document.getElementById('knop4').addEventListener('mouseup', pagina4Show, false);
 };
 
 // navigatie
-function page1Show() {
-	document.getElementById('page1').className='show';
-	document.getElementById('page2').className='hide';
-	document.getElementById('page3').className='hide';
-	document.getElementById('btn1').className='down';
-	document.getElementById('btn2').className='up';
-	document.getElementById('btn3').className='up';
+function pagina1Show() {
+	document.getElementById('pagina1').className='show';
+	document.getElementById('pagina2').className='hide';
+	document.getElementById('pagina3').className='hide';
+	document.getElementById('pagina4').className='hide';
+	document.getElementById('knop1').className='down';
+	document.getElementById('knop2').className='up';
+	document.getElementById('knop3').className='up';
+	document.getElementById('knop4').className='up';
 };
-function page2Show() {
-	document.getElementById('page1').className='hide';
-	document.getElementById('page2').className='show';
-	document.getElementById('page3').className='hide';
-	document.getElementById('btn1').className='up';
-	document.getElementById('btn2').className='down';
-	document.getElementById('btn3').className='up';
+function pagina2Show() {
+	document.getElementById('pagina1').className='hide';
+	document.getElementById('pagina2').className='show';
+	document.getElementById('pagina3').className='hide';
+	document.getElementById('pagina4').className='hide';
+	document.getElementById('knop1').className='up';
+	document.getElementById('knop2').className='down';
+	document.getElementById('knop3').className='up';
+	document.getElementById('knop4').className='up';
 };
-function page3Show() {
-	document.getElementById('page1').className='hide';
-	document.getElementById('page2').className='hide';
-	document.getElementById('page3').className='show';
-	document.getElementById('btn1').className='up';
-	document.getElementById('btn2').className='up';
-	document.getElementById('btn3').className='down';
+function pagina3Show() {
+	document.getElementById('pagina1').className='hide';
+	document.getElementById('pagina2').className='hide';
+	document.getElementById('pagina3').className='show';
+	document.getElementById('pagina4').className='hide';
+	document.getElementById('knop1').className='up';
+	document.getElementById('knop2').className='up';
+	document.getElementById('knop3').className='down';
+	document.getElementById('knop4').className='up';
 };
-
-// microfoon
-function recordAudio(){
-	navigator.device.capture.captureAudio(captureSuccess, captureError);
-};
-function captureSuccess(mediaFiles) { 
-	alert('Verzonden');
-	document.getElementById('instructies-vervolg').className='show';
-};
-function captureError() {
-	alert('Er ging iets fout bij het opnemen.');
-};
-
-// compas
-var watchID = null;
-
-function startWatch() {
-	var options = { frequency: 5 };
-	watchID = navigator.compass.watchHeading(onSuccess, onError, options);
-};
-function stopWatch() {
-	if(watchID) {
-		navigator.compass.clearWatch(watchID);
-		watchID = null; 
-	}
-};
-function onSuccess(heading) {
-	var wijzer = document.getElementById('wijzer');
-	var transform = 'rotate(-' + heading.magneticHeading + 'deg)';
-	wijzer.style.webkitTransform = transform;
-};
-function onError(compassError) {
-	alert('Compas fout: ' + compassError.code);
-};
+function pagina4Show() {
+	document.getElementById('pagina1').className='hide';
+	document.getElementById('pagina2').className='hide';
+	document.getElementById('pagina3').className='hide';
+	document.getElementById('pagina4').className='show';
+	document.getElementById('knop1').className='up';
+	document.getElementById('knop2').className='up';
+	document.getElementById('knop3').className='up';
+	document.getElementById('knop4').className='down';
+}
