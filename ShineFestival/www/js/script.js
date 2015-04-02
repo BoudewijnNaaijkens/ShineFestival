@@ -9,7 +9,6 @@ function onDeviceReady(){
 	document.getElementById('knop4').addEventListener('mouseup', pagina4Show, false);
 };
 
-// navigatie
 function pagina1Show() {
 	document.getElementById('pagina1').className='show';
 	document.getElementById('pagina2').className='hide';
