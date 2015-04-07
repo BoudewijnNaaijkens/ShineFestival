@@ -45,6 +45,8 @@ section {
 	padding-left: 10vw;
 	padding-right: 10vw;
 	text-align: justify;
+	font-size: 1.1em;
+	padding-top: 13vh;
 }
 
 nav {
@@ -67,14 +69,17 @@ button {
 .show { 
 	display: block; 
 }
+
 .hide { 
 	display: none; 
 }
 
 button.down { 
 	background-color: #26649f; /* blauw donker */ 
+	color: #f0f0f0;
 }
 
 button.up {	
 	background-color: #f0f0f0; 
+	color: #26649f;
 }
