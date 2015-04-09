@@ -1,13 +1,13 @@
 function loadScript() {
-	onDeviceReady();
+	document.addEventListener('deviceready', onDeviceReady());
 };
 
 function onDeviceReady(){
-	document.getElementById("btnEi").addEventListener("mouseup", pagina1Show, false);
-	document.getElementById("btnShine").addEventListener("mouseup", pagina2Show, false);
-	document.getElementById("btnMic").addEventListener("mouseup", pagina3Show, false);
-	document.getElementById("btnKompas").addEventListener("mouseup", pagina4Show, false);
-	document.getElementById("btnColofon").addEventListener("mouseup", pagina5Show, false);
+	document.getElementById("btnEi").addEventListener("touchend", pagina1Show, false);
+	document.getElementById("btnShine").addEventListener("touchend", pagina2Show, false);
+	document.getElementById("btnMic").addEventListener("touchend", pagina3Show, false);
+	document.getElementById("btnKompas").addEventListener("touchend", pagina4Show, false);
+	document.getElementById("btnColofon").addEventListener("touchend", pagina5Show, false);
 	initRecording();
 };
 
