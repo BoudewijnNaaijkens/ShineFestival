@@ -11,10 +11,12 @@ function initRecording() {
     updateCurrentState('idle');
     updateSecondsRecordedUI();
 
-    $('button').on('tap', function(e){
+    $('.btnRecord').on('tap', function(e){
+        console.log('preSwitch');
         switch ($(this).attr('id'))
         {
             case 'btnStart':
+            console.log('btnStart');
                 if(lastState == 'recording') {
                     stopRecording();
                 } else {
@@ -22,9 +24,11 @@ function initRecording() {
                 }
                 break;
             case 'btnPlay':
+            console.log('btnPlay');
                 playRecordedFile();
                 break;
             case 'btnSend':
+            console.log('btnSend');
                 sendRecordedFile();
                 break;
         }
