@@ -2,51 +2,83 @@
 
 * {
 	margin: 0;
-	border-bottom-style: none;
-	border-bottom-width: 0;
+	border-style: none;
+	border-width: 0;
 	padding: 0;
 }
+html, body {height: 100%;}
 
 body {
 	background: url(../img/achtergrond.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-attachment: fixed;
+	font-family: "Fira Sans";
+	font-weight: 300;
+	color: #f0f0f0;
 }
 
 header {
 	width: 100vw;
-	height: 10vh;
+	height: 8.5vh;
 	position: fixed;
 	background: #f0f0f0;
 	color: #26649f;
 	text-align: center;
-	font-size: 1.4em;
+	font-size: 5vh;
+	padding-top: 1.5vh;
 }
 
 .titel {
-	top: 20%;
-	position: absolute;
-}
-
-header p {
-	font-family: 'Fira Sans';
 	font-weight: 500;
 }
-	
-section {
 
+section {
+	padding: 8vmin;
+	position: fixed;
+	top: 10vh;
+	bottom: 10vh;
+	overflow-y: auto;
 }
 
 .tekst {
-	font-family: 'Fira Sans';
-	font-weight: 300;
-	color: #ffffff;
-	padding-left: 10vw;
-	padding-right: 10vw;
 	text-align: justify;
-	font-size: 1.1em;
-	padding-top: 13vh;
+	font-size: 2.8vh;
+	margin-bottom: 1vh;
+}
+
+.btnRecord {
+	width: 50vw;
+	height: 50vw;
+	border-radius: 100px;
+	background-color: #f0f0f0;
+	background-image: url("../img/icon/03-mic.svg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#btnStart {
+	margin: auto;
+}
+
+#textSecondsLeft {
+	text-align: center;
+	margin: 5vh 0;
+	font-size: 8vh;
+}
+
+#btnPlay {
+	float: left;
+}
+
+#btnSend {
+	float: right;
+}
+
+#btnPlay, #btnSend {
+	width: 20vw;
+	height: 20vw;
 }
 
 nav {
@@ -54,32 +86,29 @@ nav {
 	bottom: 0;
 	width: 100vw;
 	height: 10vh;
+	background-color: #f0f0f0;
 }
 
 button {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 	display: block;
 	border-width: 0px;
-	height: 10vh;
-	width: 25vw;
+	height: 100%;
+	width: 20%;
 	float: left;
-	color: white;
-	text-align: center;
 }
 
-.show { 
-	display: block; 
-}
+.show {display: block;}
+.hide {display: none;}
 
-.hide { 
-	display: none; 
-}
+#btnEi {background-image: url("../img/icon/01-ei.svg");}
+#btnShine {background-image: url("../img/icon/02-shine.svg");}
+#btnMic {background-image: url("../img/icon/03-mic.svg");}
+#btnKompas {background-image: url("../img/icon/04-kompas.svg");}
+#btnColofon {background-image: url("../img/icon/05-colofon.svg");}
 
-button.down { 
-	background-color: #26649f; /* blauw donker */ 
-	color: #f0f0f0;
-}
 
-button.up {	
-	background-color: #f0f0f0; 
-	color: #26649f;
-}
+.down {background-color: #26649f;}
+.up {background-color: #f0f0f0;}
