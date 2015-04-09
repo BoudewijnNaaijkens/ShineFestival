@@ -11,7 +11,7 @@ function initRecording() {
     updateCurrentState('idle');
     updateSecondsRecordedUI();
 
-    $('button').on('touch', function(e){
+    $('button').on('tap', function(e){
         switch ($(this).attr('id'))
         {
             case 'btnStart':
