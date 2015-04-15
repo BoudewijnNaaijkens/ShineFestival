@@ -7,11 +7,11 @@ var filename = 'myRecording.mp3';
 var uploadURL = 'http://shinefestival.herokuapp.com';
 
 function initRecording() {
-    console.log('initRecording');
+// console.log('initRecording');
     updateCurrentState('idle');
     updateSecondsRecordedUI();
 
-    $('.btnRecord').on('tap', function(e){
+    $('.btnRecord').on('click', function(){
         console.log('preSwitch');
         switch ($(this).attr('id'))
         {
@@ -36,7 +36,7 @@ function initRecording() {
 };
 
 function startRecording(){
-        console.log('startRecording');
+// console.log('startRecording');
 
     updateCurrentState('recording');
     media = createMedia();
@@ -52,7 +52,7 @@ function startRecording(){
 }
 
 function createMedia(){
-        console.log('createMedia');
+// console.log('createMedia');
 
     return new Media(filename, 
         function(){
@@ -67,15 +67,15 @@ function createMedia(){
 };
 
 function updateSecondsRecordedUI(){
-        console.log('updateSecondsRecordedUI');
+// console.log('updateSecondsRecordedUI');
 
-    var secondsLeft = maxSeconds - secondsRecorded;
-    var text = (secondsLeft < 10 ? '0' : '') + secondsLeft;
+//    var secondsLeft = maxSeconds - secondsRecorded;
+    var text = (secondsRecorded < 10 ? '0' : '') + secondsRecorded;
     $('#textSecondsLeft').html('00:' + text);
 }
 
 function stopRecording(){
-    console.log('stopRecording');
+// console.log('stopRecording');
     if(interval){
         clearInterval(interval);
     }
@@ -93,15 +93,16 @@ function stopRecording(){
 }
 
 function playRecordedFile(){
-        console.log('playRecordedFile');
-
-    updateCurrentState('playing');
-    media = createMedia();
-    media.play();
+// console.log('playRecordedFile');
+    if(lastState != 'playing') {
+        updateCurrentState('playing');
+        media = createMedia();
+        media.play();
+    }
 }
 
 function sendRecordedFile(){
-        console.log('sendRecordedFile');
+// console.log('sendRecordedFile');
 
     updateCurrentState('idle');
     $('#textSendStatus').html('uploading...');
@@ -127,7 +128,7 @@ function sendRecordedFile(){
 }
 
 function updateCurrentState(status){
-        console.log('updateCurrentState');
+// console.log('updateCurrentState');
 
     lastState = status;
     switch (status){

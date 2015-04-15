@@ -1,56 +1,121 @@
+/* Beter font meeladen met de app anders afhankelijk van verbinding ---------*/
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,500);
 
+/* Algemene style elementen -------------------------------------------------*/
 * {
 	margin: 0;
-	border-style: none;
-	border-width: 0;
 	padding: 0;
-}
-html, body {height: 100%;}
-
-body {
-	background: url(../img/achtergrond.jpg);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-attachment: fixed;
+	border-width: 0;
+	border-style: none;
 	font-family: "Fira Sans";
+	font-size: 4vmin;
 	font-weight: 300;
 	color: #f0f0f0;
 }
 
+html, body {
+	height: 100%;
+	background-color: #e4087d;
+}
+
+#background {
+	background-image: url("../img/achtergrond.svg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: fixed;
+	width: 300vw;
+	height: 172vw;
+	left: -120vw;
+	bottom: 0;
+}
+
 header {
+	position: fixed;
 	width: 100vw;
 	height: 8.5vh;
-	position: fixed;
-	background: #f0f0f0;
-	color: #26649f;
-	text-align: center;
-	font-size: 5vh;
+	background-color: #f0f0f0;
 	padding-top: 1.5vh;
 }
 
-.titel {
+h1 {
+	font-size: 5vh;
 	font-weight: 500;
+	text-align: center;
+	color: #e4087d;
 }
+
+nav {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	height: 12 vh;
+}
+
+.navbtn {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	height: 10vh;
+	width: 19.5vw;
+	background-color: #f0f0f0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#btnEi      {
+	background-image: url("../img/icon/01-ei.svg");
+	left: 0vw;
+}
+#btnShine   {
+	background-image: url("../img/icon/02-shine.svg");
+	left: 19.5vw;
+}
+#btnMic     {
+	background-image: url("../img/icon/03-mic.svg");
+	height: 12vh;
+	width: 22vw;
+	border-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1vw solid #f0f0f0;
+	border-bottom: 0;
+	border-radius: 4vw 4vw 0 0;
+	left: 38vw;
+}
+#btnKompas  {
+	background-image: url("../img/icon/04-kompas.svg");
+	left: 61vw;
+}
+#btnColofon {
+	background-image: url("../img/icon/05-colofon.svg");
+	left: 80.5vw;
+}
+
+.down {background-color: #e4087d;}
+.up   {background-color: #f0f0f0;}
 
 section {
 	padding: 8vmin;
 	position: fixed;
-	top: 10vh;
-	bottom: 10vh;
+	top: 12vh;
+	bottom: 12vh;
 	overflow-y: auto;
 }
 
-.tekst {
+.show {display: block;}
+.hide {display: none;}
+
+p {
 	text-align: justify;
 	font-size: 2.8vh;
 	margin-bottom: 1vh;
 }
 
+/* Pagina 3: recording ------------------------------------------------------*/
 .btnRecord {
 	width: 50vw;
 	height: 50vw;
-	border-radius: 100px;
+	border-radius: 25vw;
 	background-color: #f0f0f0;
 	background-image: url("../img/icon/03-mic.svg");
 	background-size: 100%;
@@ -64,51 +129,14 @@ section {
 
 #textSecondsLeft {
 	text-align: center;
-	margin: 5vh 0;
+	margin: 3vh 0;
 	font-size: 8vh;
 }
 
-#btnPlay {
-	float: left;
-}
-
-#btnSend {
-	float: right;
-}
+#btnPlay {float: left;}
+#btnSend {float: right;}
 
 #btnPlay, #btnSend {
 	width: 20vw;
 	height: 20vw;
 }
-
-nav {
-	position: fixed;
-	bottom: 0;
-	width: 100vw;
-	height: 10vh;
-	background-color: #f0f0f0;
-}
-
-button {
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	display: block;
-	border-width: 0px;
-	height: 100%;
-	width: 20%;
-	float: left;
-}
-
-.show {display: block;}
-.hide {display: none;}
-
-#btnEi {background-image: url("../img/icon/01-ei.svg");}
-#btnShine {background-image: url("../img/icon/02-shine.svg");}
-#btnMic {background-image: url("../img/icon/03-mic.svg");}
-#btnKompas {background-image: url("../img/icon/04-kompas.svg");}
-#btnColofon {background-image: url("../img/icon/05-colofon.svg");}
-
-
-.down {background-color: #26649f;}
-.up {background-color: #f0f0f0;}
