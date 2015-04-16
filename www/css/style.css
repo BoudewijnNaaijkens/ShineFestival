@@ -1,7 +1,13 @@
-/* Beter font meeladen met de app anders afhankelijk van verbinding ---------*/
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,500);
+/* 
+	#e4087d - kleur
+	#f63996 - kleur (licht)
+	#f0f0f0 - wit
+*/
 
 /* Algemene style elementen -------------------------------------------------*/
+@font-face {font-family: "Fira Sans"; src: url("../fonts/FiraSans-Light.ttf"); font-weight: 300;}
+@font-face {font-family: "Fira Sans"; src: url("../fonts/FiraSans-Medium.ttf"); font-weight: 500;}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,12 +16,13 @@
 	font-family: "Fira Sans";
 	font-size: 4vmin;
 	font-weight: 300;
+	line-height: 4vh;
 	color: #f0f0f0;
 }
 
 html, body {
 	height: 100%;
-	background-color: #e4087d;
+	background-color: #f63996;
 }
 
 #background {
@@ -32,9 +39,8 @@ html, body {
 header {
 	position: fixed;
 	width: 100vw;
-	height: 8.5vh;
+	height: 10vh;
 	background-color: #f0f0f0;
-	padding-top: 1.5vh;
 }
 
 h1 {
@@ -42,57 +48,14 @@ h1 {
 	font-weight: 500;
 	text-align: center;
 	color: #e4087d;
+	padding-top: 3.5vh;
 }
 
-nav {
-	position: fixed;
-	bottom: 0;
-	width: 100vw;
-	height: 12 vh;
+h2 {
+	font-weight: 500;
+	font-size: 2.8vh;
+	line-height: 6vh;
 }
-
-.navbtn {
-	display: block;
-	position: fixed;
-	bottom: 0;
-	height: 10vh;
-	width: 19.5vw;
-	background-color: #f0f0f0;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-#btnEi      {
-	background-image: url("../img/icon/01-ei.svg");
-	left: 0vw;
-}
-#btnShine   {
-	background-image: url("../img/icon/02-shine.svg");
-	left: 19.5vw;
-}
-#btnMic     {
-	background-image: url("../img/icon/03-mic.svg");
-	height: 12vh;
-	width: 22vw;
-	border-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	border: 1vw solid #f0f0f0;
-	border-bottom: 0;
-	border-radius: 4vw 4vw 0 0;
-	left: 38vw;
-}
-#btnKompas  {
-	background-image: url("../img/icon/04-kompas.svg");
-	left: 61vw;
-}
-#btnColofon {
-	background-image: url("../img/icon/05-colofon.svg");
-	left: 80.5vw;
-}
-
-.down {background-color: #e4087d;}
-.up   {background-color: #f0f0f0;}
 
 section {
 	padding: 8vmin;
@@ -102,14 +65,70 @@ section {
 	overflow-y: auto;
 }
 
-.show {display: block;}
-.hide {display: none;}
-
 p {
 	text-align: justify;
 	font-size: 2.8vh;
 	margin-bottom: 1vh;
 }
+
+ul {
+	list-style: none;
+	font-size: 2.8vh;
+}
+
+li {
+	font-size: 2.8vh;
+	margin-bottom: 1vh;
+}
+
+nav {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	height: 12vh;
+}
+
+.navbtn {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	height: 10vh;
+	width: 20vw;
+	background-color: #f0f0f0;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#btnEi {background-image: url("../img/icon/up_ei.svg"); left: 0vw;}
+#btnShine {background-image: url("../img/icon/up_shine.svg"); left: 20vw;}
+#btnMic {
+	background-image: url("../img/icon/up_mic.svg");
+	background-size: 130%;
+	height: 13vh;
+	width: 20vw;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1vw solid #f0f0f0;
+	border-bottom: 0;
+	border-radius: 4vw 4vw 0 0;
+	left: 40vw;
+}
+#btnKompas {background-image: url("../img/icon/up_kompas.svg"); left: 60vw;}
+#btnColofon {background-image: url("../img/icon/up_colofon.svg"); left: 80vw;}
+
+.down#btnEi {background-image: url("../img/icon/down_ei.svg");}
+.down#btnShine {background-image: url("../img/icon/down_shine.svg");}
+.down#btnMic {background-image: url("../img/icon/down_mic.svg");}
+.down#btnKompas {background-image: url("../img/icon/down_kompas.svg");}
+.down#btnColofon {background-image: url("../img/icon/down_colofon.svg");}
+
+.down {background-color: #e4087d;}
+.up   {background-color: #f0f0f0;}
+
+.show {display: block;}
+.hide {display: none;}
 
 /* Pagina 3: recording ------------------------------------------------------*/
 .btnRecord {
@@ -117,7 +136,6 @@ p {
 	height: 50vw;
 	border-radius: 25vw;
 	background-color: #f0f0f0;
-	background-image: url("../img/icon/03-mic.svg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -125,16 +143,25 @@ p {
 
 #btnStart {
 	margin: auto;
+	margin-top: 8vh;
+	background-image: url("../img/icon/up_mic.svg");
 }
 
 #textSecondsLeft {
 	text-align: center;
-	margin: 3vh 0;
-	font-size: 8vh;
+	margin-top: 6vh;
+	font-size: 6vh;
 }
 
-#btnPlay {float: left;}
-#btnSend {float: right;}
+#btnPlay {
+	float: left;
+	background-image: url("../img/icon/record_play.svg");
+}
+
+#btnSend {
+	float: right;
+	background-image: url("../img/icon/record_send.svg");
+}
 
 #btnPlay, #btnSend {
 	width: 20vw;

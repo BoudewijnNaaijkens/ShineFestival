@@ -15,7 +15,6 @@ function onDeviceReady(){
 function hideAll() {
 	$('section').attr('class', 'hide');
 	$('.navbtn').attr('class', 'navbtn up');
-	$('#eitje').attr('class', 'naveitjeup');
 }
 function pagina1Show() {
 	hideAll();
@@ -31,7 +30,6 @@ function pagina3Show() {
 	hideAll();
 	$('#pagina3').attr('class', 'show');
 	$('#btnMic').attr('class', 'navbtn down');
-	$('#eitje').attr('class', 'naveitjedown');
 };
 function pagina4Show() {
 	hideAll();
