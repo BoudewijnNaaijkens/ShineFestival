@@ -132,11 +132,11 @@ nav {
 
 /* Pagina 3: recording ------------------------------------------------------*/
 .btnRecord {
-	width: 50vw;
-	height: 50vw;
-	border-radius: 25vw;
+	width: 45vw;
+	height: 45vw;
+	border-radius: 45vw;
 	background-color: #f0f0f0;
-	background-size: 100%;
+	background-size: 130%;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -145,6 +145,7 @@ nav {
 	margin: auto;
 	margin-top: 8vh;
 	background-image: url("../img/icon/up_mic.svg");
+	border: 3vw solid #f0f0f0;
 }
 
 #textSecondsLeft {
@@ -166,4 +167,5 @@ nav {
 #btnPlay, #btnSend {
 	width: 20vw;
 	height: 20vw;
+	background-size: 100%;
 }

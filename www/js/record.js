@@ -22,6 +22,9 @@ function initRecording() {
                 } else {
                     startRecording();
                 }
+
+                $('#btnStart').css({'background-color': '#e4087d', 'background-image': 'url("../img/icon/down_mic.svg")'});
+
                 break;
             case 'btnPlay':
             //console.log('btnPlay');
