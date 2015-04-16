@@ -30,9 +30,9 @@ html, body {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	position: fixed;
-	width: 300vw;
-	height: 172vw;
-	left: -120vw;
+	width: 350vw;   /*  300vw */
+	height: 200vw;  /*  172vw */
+	left: -150vw;   /* -120vw */
 	bottom: 0;
 }
 

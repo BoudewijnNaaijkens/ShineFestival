@@ -7,16 +7,16 @@ var filename = 'myRecording.mp3';
 var uploadURL = 'http://shinefestival.herokuapp.com';
 
 function initRecording() {
-// console.log('initRecording');
+    //console.log('initRecording');
     updateCurrentState('idle');
     updateSecondsRecordedUI();
 
-    $('.btnRecord').on('click', function(){
-        console.log('preSwitch');
+    $('.btnRecord').on('click', function(e){
+        //console.log('preSwitch');
         switch ($(this).attr('id'))
         {
             case 'btnStart':
-            console.log('btnStart');
+            //console.log('btnStart');
                 if(lastState == 'recording') {
                     stopRecording();
                 } else {
@@ -24,11 +24,11 @@ function initRecording() {
                 }
                 break;
             case 'btnPlay':
-            console.log('btnPlay');
+            //console.log('btnPlay');
                 playRecordedFile();
                 break;
             case 'btnSend':
-            console.log('btnSend');
+            //console.log('btnSend');
                 sendRecordedFile();
                 break;
         }
@@ -36,8 +36,7 @@ function initRecording() {
 };
 
 function startRecording(){
-// console.log('startRecording');
-
+    //console.log('startRecording');
     updateCurrentState('recording');
     media = createMedia();
     media.startRecord();
@@ -53,7 +52,6 @@ function startRecording(){
 
 function createMedia(){
 // console.log('createMedia');
-
     return new Media(filename, 
         function(){
             if(lastState == 'playing'){
@@ -67,15 +65,14 @@ function createMedia(){
 };
 
 function updateSecondsRecordedUI(){
-// console.log('updateSecondsRecordedUI');
-
-//    var secondsLeft = maxSeconds - secondsRecorded;
+    //console.log('updateSecondsRecordedUI');
+    //var secondsLeft = maxSeconds - secondsRecorded;
     var text = (secondsRecorded < 10 ? '0' : '') + secondsRecorded;
     $('#textSecondsLeft').html('00:' + text);
 }
 
 function stopRecording(){
-// console.log('stopRecording');
+    //console.log('stopRecording');
     if(interval){
         clearInterval(interval);
     }
@@ -93,7 +90,7 @@ function stopRecording(){
 }
 
 function playRecordedFile(){
-// console.log('playRecordedFile');
+    //console.log('playRecordedFile');
     if(lastState != 'playing') {
         updateCurrentState('playing');
         media = createMedia();
@@ -102,8 +99,7 @@ function playRecordedFile(){
 }
 
 function sendRecordedFile(){
-// console.log('sendRecordedFile');
-
+    //console.log('sendRecordedFile');
     updateCurrentState('idle');
     $('#textSendStatus').html('uploading...');
 
@@ -118,7 +114,7 @@ function sendRecordedFile(){
             var ft = new FileTransfer();
             ft.upload(fileEntry.toURL(), uploadURL, 
                 function(res){
-                    $('#textSendStatus').html('success!');
+                    $('#textSendStatus').html('Verzonden!');
                 }, function(err){
                     alert('oh no!');
                     $('#textSendStatus').html(err.body);
@@ -128,8 +124,7 @@ function sendRecordedFile(){
 }
 
 function updateCurrentState(status){
-// console.log('updateCurrentState');
-
+    //console.log('updateCurrentState');
     lastState = status;
     switch (status){
         case 'idle':
